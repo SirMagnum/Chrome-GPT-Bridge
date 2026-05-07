@@ -1,0 +1,145 @@
+:root {
+  color-scheme: dark;
+  --bg: #090909;
+  --panel: rgba(22, 22, 22, 0.94);
+  --panel-strong: rgba(32, 32, 32, 0.98);
+  --border: rgba(255, 138, 0, 0.26);
+  --text: #f2f0eb;
+  --muted: #a9a39a;
+  --accent: #ff8a00;
+  --accent-soft: #ffb347;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  width: 400px;
+  height: 320px;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 138, 0, 0.18), transparent 34%),
+    radial-gradient(circle at 20% 10%, rgba(255, 179, 71, 0.12), transparent 22%),
+    linear-gradient(180deg, #0f0f10 0%, #090909 100%);
+  overflow: hidden;
+}
+
+.app-shell {
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.hero-card,
+.panel {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+  box-shadow: var(--shadow);
+  border-radius: 0;
+  padding: 16px;
+  backdrop-filter: blur(18px);
+}
+
+.hero-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -40px -60px auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 138, 0, 0.32), transparent 70%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.08;
+  max-width: 11ch;
+}
+
+.lede,
+.panel-copy {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.lede {
+  margin-top: 10px;
+}
+
+.panel {
+  display: grid;
+  gap: 12px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.status-message {
+  min-height: 1.2em;
+  color: var(--accent-soft);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  min-height: 42px;
+  padding: 0 14px;
+  font: 700 13px/1 "Segoe UI", sans-serif;
+  cursor: pointer;
+  transition: transform 140ms ease, filter 140ms ease, opacity 140ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+.ghost-button {
+  min-height: 32px;
+  padding: 0 12px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

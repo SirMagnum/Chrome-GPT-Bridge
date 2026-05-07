@@ -1,0 +1,10 @@
+Build a chrome extension that connects to gpt and lets me
+- open a pop up box from the extension to access my chatgpt account and chats
+- a button that let's me use a selection box overlay to select a screenshot like picture of the area I select and directly upload it into the chat gpt chatbar
+- a feature where highlight selecting a text gives me an option to "ask gpt"
+
+you are free to customize the UI in any way, preferably black and orange accents
+
+also do all of this after making a folder names "GPT_Chrome_Extension"
+
+and you are also free to add any extra features that may be interesting!

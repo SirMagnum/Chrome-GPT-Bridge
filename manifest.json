@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "GPT Chrome Extension",
+  "version": "1.0.0",
+  "description": "A Chrome extension with a GPT side panel, screenshot cropper, and selected-text ask GPT tools.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting",
+    "contextMenus",
+    "sidePanel",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "GPT Chrome Extension",
+    "default_popup": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

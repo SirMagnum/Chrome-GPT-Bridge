@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GPT Chrome Extension</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+</head>
+
+<body>
+    <main class="app-shell">
+        <section class="hero-card">
+            <p class="eyebrow">GPT Chrome Extension</p>
+            <h1>Drag-select pages, then send to GPT.</h1>
+            <p class="lede">Click capture, then drag on the active page to select a region. The cropped image is
+                forwarded to ChatGPT automatically.</p>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Page capture</h2>
+                <button id="capturePage" class="ghost-button" type="button">Capture</button>
+            </div>
+            <p id="statusMessage" class="status-message" aria-live="polite"></p>
+            <p class="panel-copy">This opens the selection overlay on the active page. Drag a box, release, and the
+                cropped image is sent to ChatGPT.</p>
+        </section>
+    </main>
+    <script src="sidepanel.js"></script>
+</body>
+
+</html>
