@@ -3,7 +3,7 @@
 A Chrome MV3 extension with three core tools:
 
 - A side panel for chatting with GPT from any tab.
-- A selection overlay that surfaces an "Ask GPT" action when you highlight text.
+- A selection overlay that surfaces the options - "Explain", "Summarize" and "Translate" actions when you highlight text.
 - A visible-page screenshot capture flow with a crop box and handoff toward ChatGPT.
 
 ## Install
